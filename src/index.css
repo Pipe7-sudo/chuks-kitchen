@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Island+Moments&display=swap");
+/* Island Moments is used for the Chuks Kitchen logo — it's declared in tailwind.config.js as fontFamily.display */
+
+/* Base styles - converted from @apply to standard CSS */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Custom component styles - converted from @apply to standard CSS */
+.btn-primary {
+  background-color: #dc2626;
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 200ms ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #b91c1c;
+}
+
+.btn-secondary {
+  background-color: #eab308;
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 200ms ease-in-out;
+}
+
+.btn-secondary:hover {
+  background-color: #ca8a04;
+}
+
+.btn-outline {
+  border: 2px solid #dc2626;
+  color: #dc2626;
+  background-color: transparent;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 200ms ease-in-out;
+}
+
+.btn-outline:hover {
+  background-color: #fef2f2;
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: box-shadow 300ms ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* Logo font */
+.logo-font {
+  font-family: 'Island Moments', 'Poppins', 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
