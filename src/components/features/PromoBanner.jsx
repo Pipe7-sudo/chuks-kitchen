@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 const PromoBanner = () => {
   return (
     <section className="relative w-full overflow-hidden">
-      {/* Background image — full bleed */}
+      {/* Background image */}
       <img
         src="/images/promo/promo-banner.png"
         alt="Promotional banner"

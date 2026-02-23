@@ -37,7 +37,7 @@ const Navbar = () => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `font-medium transition-colors hover:text-primary-600 ${
+                `font-medium transition-colors hover:text-[#FF7A18]  ${
                   isActive ? 'text-primary-600' : 'text-gray-700'
                 }`
               }
@@ -47,7 +47,7 @@ const Navbar = () => {
             <NavLink
               to="/menu"
               className={({ isActive }) =>
-                `font-medium transition-colors hover:text-primary-600 ${
+                `font-medium transition-colors hover:text-[#FF7A18]  ${
                   isActive ? 'text-primary-600' : 'text-gray-700'
                 }`
               }
@@ -57,7 +57,7 @@ const Navbar = () => {
             <NavLink
               to="/orders"
               className={({ isActive }) =>
-                `font-medium transition-colors hover:text-primary-600 ${
+                `font-medium transition-colors hover:text-[#FF7A18] ${
                   isActive ? 'text-primary-600' : 'text-gray-700'
                 }`
               }
@@ -67,7 +67,7 @@ const Navbar = () => {
             <NavLink
               to="/profile"
               className={({ isActive }) =>
-                `font-medium transition-colors hover:text-primary-600 ${
+                `font-medium transition-colors hover:text-[##FF7A18] ${
                   isActive ? 'text-primary-600' : 'text-gray-700'
                 }`
               }
