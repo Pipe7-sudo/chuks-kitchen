@@ -24,8 +24,9 @@ function App() {
     <Router>
       <AppLayout>
         <Routes>
-          <Route path="/"            element={<Home />} />
-          <Route path="/onboarding"  element={<Onboarding />} />
+          <Route path="/"                element={<Onboarding />} />
+          <Route path="/home"            element={<Home />} />
+         
           <Route path="/signin"      element={<SignIn />} />
           <Route path="/signup"      element={<SignUp />} />
           <Route path="/menu"        element={<Menu />} />

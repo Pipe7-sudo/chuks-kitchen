@@ -260,10 +260,12 @@ const FoodDetails = () => {
                 </div>
 
                 {/* Add to Cart */}
-                <button className="w-full bg-[#FF7A18] hover:bg-[#e86a10] active:scale-[0.98] text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2.5 transition-all duration-200 shadow-[0_2px_8px_rgba(255,122,24,0.25)] text-sm sm:text-base">
+                <Link to='/Cart'>
+                <button className="w-full bg-[#FF7A18] hover:bg-[#e86a10] active:scale-[0.98] text-white font-bold py-4 cursor-pointer rounded-xl flex items-center justify-center gap-2.5 transition-all duration-200 shadow-[0_2px_8px_rgba(255,122,24,0.25)] text-sm sm:text-base">
                   <ShoppingCart size={18} strokeWidth={2.5} />
                   Add to Cart — ₦{total.toLocaleString()}
                 </button>
+                </Link>
               </div>
             </div>
           </div>

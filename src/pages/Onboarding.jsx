@@ -76,7 +76,7 @@ const Onboarding = () => {
                 Start Your Order
               </Link>
               <Link
-                to="/about"
+                to="/Home"
                 className="w-full border border-[#FF7A18] text-[#FF7A18] hover:bg-[#FFF3E8] font-semibold py-3.5 rounded-lg text-center text-sm transition-colors"
               >
                 Learn More About Us
