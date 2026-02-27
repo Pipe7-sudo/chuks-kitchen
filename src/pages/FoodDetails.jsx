@@ -87,7 +87,7 @@ const FoodDetails = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2">
 
             {/* ── Left: Food Image ── */}
-            <div className=" hidden lg:flex relative  w-full h-64 sm:h-80 md:h-full min-h-[420px] bg-[#e8e0d8]">
+            <div className=" hidden lg:flex relative  w-full h-64 sm:h-80 md:h-full min-h-105 bg-[#e8e0d8]">
               <img
                 src={`/images/meals/${meal.id}.png`}
                 alt={meal.name}
@@ -144,7 +144,7 @@ const FoodDetails = () => {
                       <div className="flex items-center gap-3">
                         {/* Custom radio */}
                         <span
-                          className={`w-4 h-4 rounded-full border-2 flex-shrink-0 flex items-center justify-center transition-colors ${
+                          className={`w-4 h-4 rounded-full border-2 shrink-0 flex items-center justify-center transition-colors ${
                             selectedProtein === protein.id
                               ? 'border-[#FF7A18]'
                               : 'border-[#C0C0C0]'
@@ -196,7 +196,7 @@ const FoodDetails = () => {
                         <div className="flex items-center gap-3">
                           {/* Custom checkbox */}
                           <span
-                            className={`w-4 h-4 rounded border-2 flex-shrink-0 flex items-center justify-center transition-colors ${
+                            className={`w-4 h-4 rounded border-2 shrink-0 flex items-center justify-center transition-colors ${
                               checked ? 'border-[#FF7A18] bg-[#FF7A18]' : 'border-[#C0C0C0]'
                             }`}
                           >
