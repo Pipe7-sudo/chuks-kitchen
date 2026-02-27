@@ -160,7 +160,7 @@ Since this is a frontend-only implementation:
 
 - **No Backend**: All data is static/mock data
 - **No Persistence**: Cart and user data reset on page reload
-- **No API Integration**: Ready for backend integration but not connected
+- **No Backend Integration**: Ready for backend integration but not connected
 - **No Real Authentication**: Login/registration is UI only
 - **No Payment Processing**: Checkout button is non-functional
 
@@ -169,12 +169,12 @@ Since this is a frontend-only implementation:
 If given more time or scope, the following enhancements would be valuable:
 
 1. **Backend Integration**
-   - Connect to REST API or GraphQL
+   - Connect to a backend (REST or GraphQL) for dynamic data
    - Real-time order tracking
    - User authentication with JWT
 
 2. **State Management**
-   - Implement Redux or Context API for global state
+   - Implement Redux or React Context for global state
    - Persist cart data to localStorage
 
 3. **Enhanced Features**
@@ -199,13 +199,11 @@ If given more time or scope, the following enhancements would be valuable:
    - Integration tests
    - E2E tests (Playwright)
 
-## 📸 Screenshots
 
-_(Screenshots will be added once screens are implemented)_
 
 ## 🤝 Internship Context
 
-This project was developed as **Deliverable 1** for the Trueminds Innovations Ltd Frontend Developer internship program. The goal was to demonstrate:
+This project was developed as **AKINMUSIRE EBENEZER** for the Trueminds Innovations Ltd Frontend Developer internship program. The goal was to demonstrate:
 
 - Ability to translate UI designs into functional code
 - Understanding of modern frontend technologies
@@ -217,14 +215,14 @@ This project was developed as **Deliverable 1** for the Trueminds Innovations Lt
 
 This README is written for another frontend developer who might continue this work. Key considerations:
 
-- The project is ready for backend integration - all components accept props that could be populated from API calls
-- Mock data structure mirrors expected API response structure
+- The project is ready for backend integration - all components accept props that could be populated from backend calls
+- Mock data structure mirrors expected backend response structure
 - Component architecture supports easy feature additions
 - Tailwind configuration allows for theme customization
 
 ## 👨‍💻 Developer
 
-Developed by [Your Name] as part of Trueminds Innovations Ltd Internship Program
+Developed by EBENEZER AKINMUSIRE as part of Trueminds Innovations Ltd Internship Program
 
 ---
 

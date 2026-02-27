@@ -8,7 +8,7 @@ import SearchBar from '../components/common/SearchBar';
 import { ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-// ── Sample data (replace with API calls) ──────────────────────────────────────
+// ── Sample data ─────────────────────────────────────────────────────────────
 
 const CATEGORIES = [
   { id: 1, name: 'Jollof Delights', slug: 'jollof' },

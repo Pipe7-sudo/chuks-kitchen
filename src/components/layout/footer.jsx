@@ -1,98 +1,117 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Twitter, Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowUp } from 'lucide-react';
 
 const Footer = () => {
+  const [showTop, setShowTop] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setShowTop(window.scrollY > 200);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
   return (
-    <footer className="bg-[#1F2937] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <footer className="bg-[#3B2A2A] text-white">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-          {/* Brand */}
+
+          {/* ── Brand ── */}
           <div className="md:col-span-1">
             <span
-              className="text-3xl text-primary leading-none block mb-3"
+              className="text-3xl text-[#FF7A18] leading-none block mb-4"
               style={{ fontFamily: '"Island Moments", cursive' }}
             >
               Chuks Kitchen
             </span>
-            <p className="text-neutral-muted text-sm leading-relaxed">
-           Bringing the authentic flavors of Nigerian home cooking to your table, with passion and care.
+            <p className="text-[#C4A882] text-sm leading-relaxed">
+              Bringing the authentic flavors of Nigerian home cooking to your table, with passion and care.
             </p>
-            <div className="flex gap-4 mt-5">
-              <a href="#" aria-label="Facebook" className="text-neutral-muted hover:text-primary transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="#" aria-label="Instagram" className="text-neutral-muted hover:text-primary transition-colors">
-                <Instagram size={20} />
-              </a>
-              <a href="#" aria-label="Twitter" className="text-neutral-muted hover:text-primary transition-colors">
-                <Twitter size={20} />
-              </a>
-            </div>
           </div>
 
-          {/* Quick Links */}
+          {/* ── Quick Links ── */}
           <div>
-            <h3 className="text-white font-semibold text-base mb-4">Quick Links</h3>
+            <h3 className="text-white font-semibold text-sm mb-4">Quick Links</h3>
             <ul className="space-y-2.5">
-              {['Home', 'Menu', 'Cart', 'Orders', 'Profile'].map((link) => (
-                <li key={link}>
+              {[
+                { label: 'Home',    to: '/' },
+                { label: 'Explore', to: '/explore' },
+                { label: 'My Order',to: '/orders' },
+                { label: 'Account', to: '/account' },
+                { label: 'Contact', to: '/contact' },
+              ].map(({ label, to }) => (
+                <li key={label}>
                   <Link
-                    to={`/${link.toLowerCase() === 'home' ? '' : link.toLowerCase()}`}
-                    className="text-neutral-muted hover:text-primary text-sm transition-colors"
+                    to={to}
+                    className="text-[#C4A882] hover:text-[#FF7A18] text-sm transition-colors"
                   >
-                    {link}
+                    {label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Help */}
+          {/* ── Contact Us ── */}
           <div>
-            <h3 className="text-white font-semibold text-base mb-4">Help</h3>
+            <h3 className="text-white font-semibold text-sm mb-4">Contact Us</h3>
+            <ul className="space-y-3">
+              <li className="flex items-center gap-2 text-[#C4A882] text-sm">
+                <Phone size={14} className="shrink-0" />
+                +234 801 234 5678
+              </li>
+              <li className="flex items-center gap-2 text-[#C4A882] text-sm">
+                <Mail size={14} className="shrink-0" />
+                hello@chukskitchen.com
+              </li>
+              <li className="flex items-start gap-2 text-[#C4A882] text-sm">
+                <MapPin size={14} className="shrink-0 mt-0.5" />
+                123 Taste Blvd, Lagos, Nigeria
+              </li>
+            </ul>
+          </div>
+
+          {/* ── Social Links ── */}
+          <div>
             <ul className="space-y-2.5">
-              {['FAQ', 'Track Order', 'Return Policy', 'Privacy Policy', 'Terms of Service'].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-neutral-muted hover:text-primary text-sm transition-colors">
-                    {item}
+              {['Facebook', 'Twitter', 'LinkedIn', 'Instagram'].map((platform) => (
+                <li key={platform}>
+                  <a
+                    href="#"
+                    aria-label={platform}
+                    className="text-[#C4A882] hover:text-[#FF7A18] text-sm transition-colors"
+                  >
+                    {platform}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Contact */}
-          <div>
-            <h3 className="text-white font-semibold text-base mb-4">Contact Us</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-3 text-neutral-muted text-sm">
-                <MapPin size={16} className="text-primary mt-0.5 shrink-0" />
-                12 Kitchen Road, Lagos, Nigeria
-              </li>
-              <li className="flex items-center gap-3 text-neutral-muted text-sm">
-                <Phone size={16} className="text-primary shrink-0" />
-                +234 800 000 0000
-              </li>
-              <li className="flex items-center gap-3 text-neutral-muted text-sm">
-                <Mail size={16} className="text-primary shrink-0" />
-                hello@chukskitchen.ng
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-3">
-          <p className="text-neutral-muted text-xs">
-            © {new Date().getFullYear()} Chuks Kitchen. All rights reserved.
-          </p>
-          <div className="flex gap-5">
-            <a href="#" className="text-neutral-muted hover:text-primary text-xs transition-colors">Privacy Policy</a>
-            <a href="#" className="text-neutral-muted hover:text-primary text-xs transition-colors">Terms of Service</a>
-          </div>
-        </div>
+      {/* ── Dashed Divider ── */}
+      <div className="border-t border-dashed border-[#7B4EA0]/60" />
+
+      {/* ── Bottom Bar ── */}
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-4 flex items-center justify-between">
+        <p className="text-[#C4A882] text-xs">
+          © {new Date().getFullYear()} Lift Media. All rights reserved.
+        </p>
+
+        {/* Scroll to top */}
+        {showTop && (
+          <button
+            onClick={scrollToTop}
+            className="w-9 h-9 rounded-full bg-[#0081FE] hover:bg-[#e86a10] flex items-center justify-center transition-colors shadow-md"
+            aria-label="Scroll to top"
+          >
+            <ArrowUp size={16} strokeWidth={2.5} className="text-white" />
+          </button>
+        )}
       </div>
     </footer>
   );

@@ -55,7 +55,7 @@ const Navbar = () => {
               Menu
             </NavLink>
             <NavLink
-              to="/orders"
+              to="/"
               className={({ isActive }) =>
                 `font-medium transition-colors hover:text-[#FF7A18] ${
                   isActive ? 'text-primary-600' : 'text-gray-700'
@@ -65,7 +65,7 @@ const Navbar = () => {
               Orders
             </NavLink>
             <NavLink
-              to="/profile"
+              to="/"
               className={({ isActive }) =>
                 `font-medium transition-colors hover:text-[##FF7A18] ${
                   isActive ? 'text-primary-600' : 'text-gray-700'

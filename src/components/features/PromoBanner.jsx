@@ -12,7 +12,7 @@ const PromoBanner = () => {
 
       {/* Dark gradient overlay — strong on left, fades right */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/20" />
-
+      
       {/* Content */}
       <div className="relative z-10 px-6 sm:px-12 lg:px-16 py-14 sm:py-20 max-w-2xl">
         <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold leading-snug mb-3">
